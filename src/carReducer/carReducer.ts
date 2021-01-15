@@ -2,7 +2,7 @@ import { ADD_FEATURE } from "../actions/addFeature";
 import { REMOVE_FEATURE } from "../actions/removeFeat";
 import { Feature, CarActions, CarState } from "../types";
 
-export const initialState: CarState = {
+export const initialState = {
   additionalPrice: 0,
   car: {
     price: 26395,

@@ -6,9 +6,9 @@ import AddedFeatures from "./components/AddedFeatures";
 import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
-import { CarState } from "./types";
+import { CarState, AppProps } from "./types";
 
-const App = (props: CarState) => {
+const App: React.FC<AppProps> = (props) => {
   console.log(props);
 
   // const state = {

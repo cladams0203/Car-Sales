@@ -27,6 +27,10 @@ export interface Car {
   features: Feature[];
 }
 
+export interface AppProps {
+  state: CarState;
+}
+
 export interface CarState {
   additionalPrice: number;
   car: Car;
