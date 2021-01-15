@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addFeature } from "./actions/addFeature";
-import { removeFeat } from "./actions/removeFeat";
 
 import Header from "./components/Header";
 import AddedFeatures from "./components/AddedFeatures";
 import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
-const App = (props) => {
+import { CarState } from "./types";
+
+const App = (props: CarState) => {
   console.log(props);
 
   // const state = {
@@ -33,10 +33,10 @@ const App = (props) => {
   //   props.remove(item);
   // };
 
-  const buyItem = (item) => {
-    // dipsatch an action here to add an item
-    props.add(item);
-  };
+  // const buyItem = (item) => {
+  //   // dipsatch an action here to add an item
+  //   props.add(item);
+  // };
 
   return (
     <div className="boxes">
@@ -51,7 +51,7 @@ const App = (props) => {
     </div>
   );
 };
-function mapStateToProps(state) {
+function mapStateToProps(state: CarState) {
   return {
     state,
   };
