@@ -1,16 +1,11 @@
 import React from "react";
-import { connect } from "react-redux";
 
 import Header from "./components/Header";
 import AddedFeatures from "./components/AddedFeatures";
 import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
-import { CarState, AppProps } from "./types";
-
-const App: React.FC<AppProps> = (props) => {
-  console.log(props);
-
+const App: React.FC = () => {
   // const state = {
   //   additionalPrice: 0,
   //   car: {
@@ -51,10 +46,10 @@ const App: React.FC<AppProps> = (props) => {
     </div>
   );
 };
-function mapStateToProps(state: CarState) {
-  return {
-    state,
-  };
-}
+// function mapStateToProps(state: CarState) {
+//   return {
+//     state,
+//   };
+// }
 
-export default connect(mapStateToProps)(App);
+export default App;
