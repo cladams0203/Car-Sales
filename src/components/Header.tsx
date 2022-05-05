@@ -1,7 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Car, CarState } from "../types";
 
-const Header = (props) => {
+type HeaderProps = {
+  car: Car;
+};
+
+const Header = (props: HeaderProps) => {
   return (
     <>
       <figure className="image is-128x128">
@@ -13,4 +18,4 @@ const Header = (props) => {
   );
 };
 
-export default connect((state) => ({ car: state.car }))(Header);
+export default connect((state: CarState) => ({ car: state.car }))(Header);

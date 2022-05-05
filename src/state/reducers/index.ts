@@ -1,6 +1,6 @@
-import { ADD_FEATURE, REMOVE_FEATURE } from "../actions";
+import { Action, ActionStrings, CarState } from "../../types";
 
-const initState = {
+const initState: CarState = {
   additionalPrice: 0,
   car: {
     price: 26395,
@@ -16,9 +16,9 @@ const initState = {
   ],
 };
 
-const carReducer = (state = initState, action) => {
+const carReducer = (state: CarState = initState, action: Action) => {
   switch (action.type) {
-    case ADD_FEATURE:
+    case ActionStrings.ADD_FEATURE:
       return {
         ...state,
         additionalPrice: state.additionalPrice + action.payload.price,
@@ -28,7 +28,7 @@ const carReducer = (state = initState, action) => {
         },
         additionalFeatures: state.additionalFeatures.filter((f) => f.id !== action.payload.id),
       };
-    case REMOVE_FEATURE:
+    case ActionStrings.REMOVE_FEATURE:
       return {
         ...state,
         additionalPrice: state.additionalPrice - action.payload.price,

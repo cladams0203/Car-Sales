@@ -1,8 +1,13 @@
 import React from "react";
 import AdditionalFeature from "./AdditionalFeature";
 import { connect } from "react-redux";
+import { CarState, Feature } from "../types";
 
-const AdditionalFeatures = (props) => {
+type AdditionalFeaturesProps = {
+  additionalFeatures: Feature[];
+};
+
+const AdditionalFeatures = (props: AdditionalFeaturesProps) => {
   return (
     <div className="content">
       <h4>Additional Features</h4>
@@ -19,4 +24,4 @@ const AdditionalFeatures = (props) => {
   );
 };
 
-export default connect((state) => ({ additionalFeatures: state.additionalFeatures }))(AdditionalFeatures);
+export default connect((state: CarState) => ({ additionalFeatures: state.additionalFeatures }))(AdditionalFeatures);

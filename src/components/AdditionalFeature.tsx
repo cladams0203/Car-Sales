@@ -1,8 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addFeature } from "../state/actions";
+import { Feature } from "../types";
 
-const AdditionalFeature = (props) => {
+type AdditionalFeatureProps = {
+  addFeature: (feature: Feature) => void;
+  feature: Feature;
+};
+
+const AdditionalFeature = (props: AdditionalFeatureProps) => {
   return (
     <li>
       <button className="button" onClick={() => props.addFeature(props.feature)}>
